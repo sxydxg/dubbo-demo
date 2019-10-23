@@ -7,6 +7,19 @@
     <groupId>sxydxg</groupId>
     <artifactId>dubbo-consumer-01</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+  <dependencies>
 
+      <dependency>
+          <groupId>sxydxg</groupId>
+          <artifactId>dubbo-interface</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>dubbo</artifactId>
+          <version>2.6.2</version>
+      </dependency>
+  </dependencies>
 
 </project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- -->
+    <dubbo:application name="provider01" ></dubbo:application>
+    <!-- 不使用multicast广播注册中心暴露服务地址 ，因为会出现不必要的“麻烦”,采用直连-->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" />-->
+    <dubbo:consumer check="false" ></dubbo:consumer>
+    <dubbo:reference interface="com.dxg.service.SayHello" id="sayHello" url="dubbo://localhost:20880" check="false"></dubbo:reference>
+
+
+</beans>
